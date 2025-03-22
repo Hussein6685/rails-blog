@@ -12,7 +12,7 @@
 
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
-
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -23,6 +23,17 @@
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
+    <main class="mt-[25%] sm:mt-[15%] lg:mt-[7%] xl:mt-[5%]">
     <%= yield %>
+      </main>
+
+
+<footer class="bg-white rounded-lg shadow-sm dark:bg-gray-900 m-4 fixed bottom-0 w-full">
+    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/" class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
   </body>
 </html>
