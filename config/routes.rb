@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts
   get "home/index"
   devise_for :users, controllers: { registrations: 'registration'}
-  root 'home#index'
+  root 'posts#index'
   get 'home', to: 'home#index', as: 'home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
