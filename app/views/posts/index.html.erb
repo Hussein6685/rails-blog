@@ -12,4 +12,6 @@
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+<% if @posts.empty? %>
+  <p>No posts found.</p>
+<% end %>
